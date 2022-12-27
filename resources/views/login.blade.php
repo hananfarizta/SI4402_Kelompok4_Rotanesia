@@ -50,7 +50,7 @@
                 <p style="padding-top:20px; color:rgb(192,192,192);">Rontanesia 2022 All Rights Reserved</p>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6"></div>
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="width: 745px; height: 789px; margin-left:0px; ">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
