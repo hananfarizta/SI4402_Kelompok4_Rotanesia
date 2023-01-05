@@ -8,9 +8,6 @@ body {
     overflow-x: hidden;
 }
 
-#login {
-}
-
 input.remember-me {
     accent-color: #c32334;
     height: 15px;
