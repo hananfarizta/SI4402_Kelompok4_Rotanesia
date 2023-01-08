@@ -28,6 +28,19 @@ Route::get('/register', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/product', function () {
+    return view('product');
+});
+
+Route::get('/best-seller', function () {
+    return view('best-seller');
+});
+
+Route::get('/edit-profile', function () {
+    return view('edit-profile');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
