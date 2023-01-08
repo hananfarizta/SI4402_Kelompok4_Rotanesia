@@ -40,3 +40,13 @@ Route::get('/best-seller', function () {
 Route::get('/edit-profile', function () {
     return view('edit-profile');
 });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
