@@ -18,6 +18,44 @@
 
 </head>
 <body>
+        <nav>
+		<div class="logo fw-bolder">
+			<h3><a href="/home" style="color: #c32334; text-decoration:none">ROTANESIA</a></h3>
+			<!--BG MENU-->
+		</div>	
+					<ul>
+						<li class="nav-item">
+							<a class="nav-link fw-bold" href="/home"><i class="bi bi-house-door-fill" style="padding: 3px"></i>Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold" href="/product"><i class="bi bi-basket-fill" style="padding: 3px"></i>Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold" href="/best-seller"> <i class="bi bi-fire" style="padding: 3px"></i>Best Seller</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold" href="#about"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link fw-bold" href="#about"><i class="bi bi-headset" style="padding: 3px"></i>Services</a>
+						</li>
+						<li class="nav-item" onclick="myFunction()">
+							<a class="nav-link fw-bold" href="#"><i class="bi bi-person-fill" style="padding: 3px"></i>Account <i class="bi bi-caret-down-fill"></i></a>
+							<ul class="dropdown">
+								<li><a href="/login">Login</a></li>
+								<li><a href="/register">Register</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+					<div class="menu-toggle">
+						<input type="checkbox" />
+						<span></span>
+						<span></span>
+						<span></span>
+						<!-- Menu TOGGLE-->
+					</div>
+		</nav>
     <section id="login">
     <div class="container">
         <div class="row">
@@ -109,6 +147,8 @@
         </div>
     </div>
 </section>
+	
+    <script src="js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
