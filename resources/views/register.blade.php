@@ -34,7 +34,7 @@
 							<a class="nav-link fw-bold" href="/best-seller"> <i class="bi bi-fire" style="padding: 3px"></i>Best Seller</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link fw-bold" href="#about"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
+							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link fw-bold" href="#about"><i class="bi bi-headset" style="padding: 3px"></i>Services</a>

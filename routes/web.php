@@ -41,6 +41,18 @@ Route::get('/edit-profile', function () {
     return view('edit-profile');
 });
 
+Route::get('/detail-product', function () {
+    return view('detail-product');
+});
+
+Route::get('/direct-succes', function () {
+    return view('direct-succes');
+});
+
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
