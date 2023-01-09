@@ -49,6 +49,11 @@ Route::get('/direct-succes', function () {
     return view('direct-succes');
 });
 
+Route::get('/status-order', function () {
+    return view('status-order');
+});
+
+
 Route::get('/about-us', function () {
     return view('about-us');
 });

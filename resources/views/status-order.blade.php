@@ -54,7 +54,7 @@
 		</nav>
 
     <center>
-        <table border="1" cellpadding="6">
+        <table border="1" cellpadding="6" >
             <tr>
                 <td>No</td>
                 <td>Nama Toko</td>
