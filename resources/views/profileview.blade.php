@@ -45,8 +45,6 @@
                 <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
-                                    alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                             {{-- Get User Image --}}
                             {{-- if User doesn't has image return template image --}}
                             @if ($user->image == null)
@@ -127,8 +125,8 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    {{-- <p class="text-muted mb-0">{{ $user->address }}</p>
-                                    <p class="text-muted mb-0">Bandung</p>
+                                    <p class="text-muted mb-0">{{ $user->address }}</p>
+                                    {{-- <p class="text-muted mb-0">Bandung</p> --}}
                                 </div>
                             </div>
                         </div>
