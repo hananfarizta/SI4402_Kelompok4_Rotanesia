@@ -20,7 +20,7 @@ Route::post('register', [UserController::class, 'register'])->name('register.pos
 Route::post('login', [UserController::class, 'loginUser'])->name('login.post');
 Route::post('/loginadmin', [UserController::class, 'loginAdmin'])->name('login.admin');
 Route::get('logout', [UserController::class, 'logout'])->name('logout.get');
-route::post('/logout', [UserController::class, 'logoutUser']);
+route::post('/logout', [UserController::class, 'logoutUser'])->name('logout');
 
 Route::get('/admindash', [AdminController::class], 'dashboard')->name('admindash');
 

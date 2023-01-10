@@ -10,7 +10,7 @@
             <div id="sidebar-nav">
                 <ul>
                     <li class="active"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                    <li><a href="profileupdate"><i class="fa fa-cog"></i> Settings</a></li>
+                    <li><a href="/edit-profile"><i class="fa fa-cog"></i> Settings</a></li>
                     <li><a href="historytr"><i class="fas fa-shopping-cart"></i> History Transaction</a></li>
                     <li><a href="toko"><i class="fa fa-home"></i> TOKO</a></li>
                     <li></li>
@@ -83,7 +83,7 @@
                                             {{-- <p class="text-muted mb-3 text-center">Rp. 10000</p> --}}
                                         </div>
                                         <div class="d-flex justify-content-center mb-1">
-                                            <a href="topup"><button type="button" 
+                                            <a href="topup"><button type="button"
                                                     class="btn btn-outline-primary ms-1 mt-2"style="width: 10rem;">Top
                                                     Up</button></a>
                                         </div>
