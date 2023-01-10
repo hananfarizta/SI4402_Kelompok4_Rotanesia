@@ -79,8 +79,13 @@
                                         <p class="mb-2 text-center"><span class="text-danger font-italic me-1">SALDO AKUN</span>
                                         </p>
                                         <div>
-                                            {{-- <p class="text-muted mb-3">Rp.{{ $user_balance }}</p> --}}
-                                            <p class="text-muted mb-3 text-center">Rp. 10000</p>
+                                            <p class="text-muted mb-3">Rp.{{ $user_balance }}</p>
+                                            {{-- <p class="text-muted mb-3 text-center">Rp. 10000</p> --}}
+                                        </div>
+                                        <div class="d-flex justify-content-center mb-1">
+                                            <a href="topup"><button type="button" 
+                                                    class="btn btn-outline-primary ms-1 mt-2"style="width: 10rem;">Top
+                                                    Up</button></a>
                                         </div>
                                 </li>
                             </ul>
