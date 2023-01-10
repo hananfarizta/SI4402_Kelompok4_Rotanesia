@@ -46,14 +46,18 @@
                             <label class="form-label" for="password2">Confirm Password</label>
                             <input type="password" name="password2" class="form-control" id="password2" required>
                         </div>
-                        {{-- <div class="input-group mt-4 mb-3" style="width:72%">
-                        <label class="input-group-text" for="inputGroupSelect01" for="roles">Role</label>
-                        <select class="form-select" id="inputGroupSelect01" required>
+                        <div class="mb-3">
+                            <label class="form-label" for="password2">Photo Profile</label>
+                            <input type="file" class="form-control" id="inputGroupFile01" name="image" style="height: 40px;">
+                        </div>
+                        <div class="input-group mt-4 mb-3" style="width:72%">
+                        <label class="input-group-text" for="roles">Role</label>
+                        <select class="form-select" name="roles" id="roles" required>
                             <option selected>Choose Your Role</option>
-                            <option value="1">Seller</option>
-                            <option value="2">Buyer</option>
+                            <option value="ADMIN">Admin</option>
+                            <option value="USER">User</option>
                         </select>
-                        </div> --}}
+                        </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="remember-me" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Remember Me</label>                          

@@ -26,19 +26,26 @@ class UserController extends Controller
      */
     public function register(Request $request)
     {
-        $data = $request->all();
-        // dd($data);
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $image = $request->file('image');
 
-        User::create([
-            'email' => $data['email'],
-            'name' => $data['name'],
-            'username' => $data['username'],
-            'phone_number'=>$data['phone_number'],
-            'address' => $data['address'],
-            'password' => bcrypt($data['password']),
-        ]);
+            $response = Http::attach('img', file_get_contents($image), $image->getClientOriginalName())
+                ->post(env('API') . '/register', [
+                    'name' => $request->input('name'),
+                    'email' => $request->input('email'),
+                    'password' => $request->input('password'),
+                    'password_confirmation' => $request->input('password_confirmation'),
+                    'phone' => $request->input('phone'),
+                    'address' => $request->input('address'),
+                    'image' => $request->file('image')->store('public/images'),
+                ]);
+        } else {
+            $response = Http::post(env('API') . '/register', $request->all());
+        }
 
-        return redirect('/login')->with('success', 'Register Success');
+        $response = $response->json();
+
+        return redirect('/login')->with('success', $response['message']);
     }
 
     /**
@@ -49,19 +56,54 @@ class UserController extends Controller
      */
     public function loginUser(Request $request)
     {
+        // Make request to external API
+        $response = Http::post(env('API') . '/login', [
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
+        ]);
+        $response = $response->json();
+        // dd($response);
+
+        if ($response['status'] == 'success') {
+            // Get user credentials from API response
+            $credentials = [
+                'email' => $response['user']['email'],
+                'password' => $request->input('password')
+            ];
+
+            // Attempt to login the user
+            if (auth()->attempt($credentials)) {
+                $request->session()->put('user', $response['user']);
+                // set cookie
+                // Get token from db
+                $token = DB::table('user_tokens')->where('user_id', $response['user']['id'])->first();
+                // dd($token);
+                return redirect('/')->with('success', $response['message'])->cookie('token', $token->token, time() + (86400 * 30), "/");
+            }
+        }
+            return redirect('/login')->with('error', 'Invalid credentials');
+    }
+
+    /**
+     * Login Admin
+     * 
+     * @param Request $request
+     * @return response
+     */
+    public function loginAdmin(Request $request)
+    {
         $request->validate([
             'email' => 'required|string|email',
             'password' => 'required|string',
             'remember_me' => 'boolean'
         ]);
 
-
-        // login user with email and password
+        // login admin with email and password
         $credentials = request(['email', 'password']);
         if (!auth()->attempt($credentials))
-            return redirect()->route('login')->with('error', 'Login Failed');
+            return redirect('/login')->with('error', 'Login Failed');
 
-        return redirect('/')->with('success', 'Login Success');
+        return redirect('/admindash')->with('success', 'Login Success');
     }
 
     /**

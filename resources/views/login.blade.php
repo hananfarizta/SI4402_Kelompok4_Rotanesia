@@ -15,7 +15,13 @@
                     <button class="google"><img src="image/google.png" alt="" width="20"> Sign in With google</button>
                     <p class="or" style="padding-left:150px; padding-top:20px; color:rgb(192,192,192)">Or Sign In With Email</p>
 
-                    <form action="{{ route('login.post') }}" method="POST">
+                    <style>
+                        .radio-group div {
+                            display: inline-block;
+                        }
+                    </style>
+                    
+                    <form id="login-form" action="{{ route('login.post') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label" for="email">Email address</label>
@@ -25,6 +31,20 @@
                             <label class="form-label" for="password">Password</label>
                             <input type="password" name="password" class="form-control" id="password">
                         </div>
+                        <div class="input-group mt-4 mb-3" style="width:72%">
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" id="admin" name="login-type" value="admin"
+                                    onclick="setAdminRoute()">
+                                <label for="admin">Admin</label>
+                            </div>
+							<div>
+                                <input type="radio" id="regular" name="login-type" value="regular"
+                                    onclick="setUserRoute()">
+                                <label for="regular">User</label>
+                            </div>
+                        </div>
+                        </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="remember-me" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Remember Me</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -32,6 +52,16 @@
                         </div>
                         <button type="submit" class="btn btn-danger" style="width: 444px; height:50px; border-radius:25px;font-size:20px; background-color:#c32334; margin-top:20px;">Login</button>
                     </form>
+
+                    <script>
+                        function setAdminRoute() {
+                            document.getElementById('login-form').action = "{{ route('login.admin') }}";
+                        }
+                        function setUserRoute() {
+                            document.getElementById('login-form').action = "{{ route('login.post') }}";
+                        }
+                    </script>
+
                     <p style="margin-top:25px;">Not registered yet?<a href="{{ 'register' }}" style="color: #c32334; font-weight:700; text-decoration:none;"> Create An Account</a></p>
                 </div>
                 <p style="padding-top:20px; color:rgb(192,192,192);">Rontanesia 2022 All Rights Reserved</p>
