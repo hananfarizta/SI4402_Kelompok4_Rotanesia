@@ -20,47 +20,31 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label" for="email">Email address</label>
-                            <input type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                            <input type="text" name="email" class="form-control" id="email" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="name">Fullname</label>
-                            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" required>
+                            <input type="text" name="name" class="form-control" id="name" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="username">Username</label>
-                            <input type="text" name="username" class="form-control" id="username" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="phone_number">Phone Number</label>
-                            <input type="text" name="phone_number" class="form-control" id="phone_number" aria-describedby="emailHelp" required>
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="text" name="phone" class="form-control" id="phone" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="address">Address</label>
-                            <input type="text" name="address" class="form-control" id="address" aria-describedby="emailHelp" required>
+                            <input type="text" name="address" class="form-control" id="address" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
                             <input type="password" name="password" class="form-control" id="password" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="password2">Confirm Password</label>
-                            <input type="password" name="password2" class="form-control" id="password2" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="password2">Photo Profile</label>
+                            <label class="form-label" for="image">Photo Profile</label>
                             <input type="file" class="form-control" id="inputGroupFile01" name="image" style="height: 40px;">
-                        </div>
-                        <div class="input-group mt-4 mb-3" style="width:72%">
-                        <label class="input-group-text" for="roles">Role</label>
-                        <select class="form-select" name="roles" id="roles" required>
-                            <option selected>Choose Your Role</option>
-                            <option value="ADMIN">Admin</option>
-                            <option value="USER">User</option>
-                        </select>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="remember-me" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>                          
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                         </div>
                         <button type="submit" class="btn btn-danger" style="width: 444px; height:50px; border-radius:25px;font-size:20px; background-color:#c32334;">Register</button>
                     </form>
@@ -75,7 +59,7 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-            
+
                     <div class="carousel-inner" style="width: 745px; height: 1080px; margin-left:0px; " >
                         <div class="carousel-item active">
                         <img src="image/rottan/Rectangle 35.png"class="d-block w-100" alt="...">

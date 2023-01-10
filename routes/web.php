@@ -24,6 +24,8 @@ route::post('/logout', [UserController::class, 'logoutUser']);
 
 Route::get('/admindash', [AdminController::class], 'dashboard')->name('admindash');
 
+Route::get('/profileview', [UserController::class, 'profile'])->name('profileview');
+
 Route::get('/', function () {
     return view('home');
 });
@@ -36,9 +38,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/profileview', function () {
-    return view('profileview');
-});
+// Route::get('/profileview', function () {
+//     return view('profileview');
+// });
 
 Route::get('/register', function () {
     return view('register');

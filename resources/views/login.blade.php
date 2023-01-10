@@ -20,12 +20,12 @@
                             display: inline-block;
                         }
                     </style>
-                    
+
                     <form id="login-form" action="{{ route('login.post') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label" for="email">Email address</label>
-                            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <input type="email" name="email" class="form-control" id="email">
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
@@ -74,7 +74,7 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-            
+
                     <div class="carousel-inner" style="width: 745px; height: 789px; margin-left:0px; " >
                         <div class="carousel-item active">
                         <img src="image/rottan/rottan1.jpg"class="d-block w-100" alt="...">

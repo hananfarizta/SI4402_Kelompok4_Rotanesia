@@ -49,22 +49,22 @@
                                     alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                             {{-- Get User Image --}}
                             {{-- if User doesn't has image return template image --}}
-                            {{-- @if ($user->image == null)
+                            @if ($user->image == null)
                                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                                     alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                             @else
                                 <img src="{{ asset('storage/' . $user->image) }}" alt="avatar"
                                     class="rounded-circle img-fluid" style="width: 150px;">
-                            @endif --}}
+                            @endif
                             {{-- Get User Name --}}
                             {{-- <h5 class="my-3">{{ $user->name }}</h5> --}}
-                            <h5 class="my-3">Surya Manurung</h5>
-                            {{-- <p class="text-muted mb-1">{{ $u->email }}</p>
-                                <p class="text-muted mb-4">{{ $u->address }}</p> --}}
+                            <!-- <h5 class="my-3">Surya Manurung</h5> -->
+                            <p class="text-muted mb-1">{{ $user->email }}</p>
+                                <p class="text-muted mb-4">{{ $user->address }}</p>
 
-                            {{-- <h5 class="my-3">Joni Setiawan</h5>
+                            <!-- {{-- <h5 class="my-3">Joni Setiawan</h5>
                             <p class="text-muted mb-1">tenangaja@gmail.com</p>
-                            <p class="text-muted mb-4">Babatan, Jambi, Indonesia</p> --}}
+                            <p class="text-muted mb-4">Babatan, Jambi, Indonesia</p> --}} -->
                             <div class="d-flex justify-content-center mb-2 ">
                                 <a href="profileupdate"><button type="button" class="btn btn-danger"
                                         style="width: 22rem;">Update</button></a>
@@ -82,7 +82,7 @@
                                         </p>
                                         <div>
                                             {{-- <p class="text-muted mb-3">Rp.{{ $user_balance }}</p> --}}
-                                            <p class="text-muted mb-3 text-center">Rp. 10000</p> 
+                                            <p class="text-muted mb-3 text-center">Rp. 10000</p>
                                         </div>
                                 </li>
                             </ul>
@@ -97,8 +97,8 @@
                                     <p class="mb-0">Full Name</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    {{-- <p class="text-muted mb-0">{{ $user->name }}</p> --}}
-                                    <p class="text-muted mb-0">Surya Manurung</p>
+                                    <p class="text-muted mb-0">{{ $user->name }}</p>
+                                    <!-- <p class="text-muted mb-0">Surya Manurung</p> -->
                                 </div>
                             </div>
                             <hr>
@@ -107,8 +107,8 @@
                                     <p class="mb-0">Email</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    {{-- <p class="text-muted mb-0">{{ $user->email }}</p> --}}
-                                    <p class="text-muted mb-0">suryamanurung@gmail.com</p>
+                                    <p class="text-muted mb-0">{{ $user->email }}</p>
+                                    <!-- <p class="text-muted mb-0">suryamanurung@gmail.com</p> -->
                                 </div>
                             </div>
                             <hr>
@@ -117,8 +117,8 @@
                                     <p class="mb-0">Phone</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    {{-- <p class="text-muted mb-0">{{ $user->phone }}</p> --}}
-                                    <p class="text-muted mb-0">089876767878</p>
+                                    <p class="text-muted mb-0">{{ $user->phone }}</p>
+                                    <!-- <p class="text-muted mb-0">089876767878</p> -->
                                 </div>
                             </div>
                             <hr>
@@ -127,7 +127,7 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    {{-- <p class="text-muted mb-0">{{ $user->address }}</p> --}}
+                                    {{-- <p class="text-muted mb-0">{{ $user->address }}</p>
                                     <p class="text-muted mb-0">Bandung</p>
                                 </div>
                             </div>

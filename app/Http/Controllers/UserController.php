@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
@@ -20,7 +24,7 @@ class UserController extends Controller
 
     /**
      * Register User
-     * 
+     *
      * @param Request $request
      * @return response
      */
@@ -44,13 +48,14 @@ class UserController extends Controller
         }
 
         $response = $response->json();
+        // dd($response);
 
         return redirect('/login')->with('success', $response['message']);
     }
 
     /**
      * Login User
-     * 
+     *
      * @param Request $request
      * @return response
      */
@@ -86,7 +91,7 @@ class UserController extends Controller
 
     /**
      * Login Admin
-     * 
+     *
      * @param Request $request
      * @return response
      */
@@ -108,7 +113,7 @@ class UserController extends Controller
 
     /**
      * Logout User
-     * 
+     *
      */
     public function logoutUser()
     {
@@ -116,5 +121,32 @@ class UserController extends Controller
         auth()->logout();
 
         return redirect('/')->with('success', 'Logout Success');
+    }
+
+    public function profile(Request $request)
+    {
+        $response = Http::withHeaders([
+            'Authorization' => $request->cookie('token')
+        ])->get(env('API') . '/user/profile');
+        $response = $response->object();
+        // get user data
+        // then pass to frontend as user
+        $user = $response->data;
+        // dd($user);
+        $balance = DB::table('user_balances')->where('user_id', $user->id)->first();
+        // check if use balance is exist in database
+        // if not, create new balance
+        if (!$balance) {
+            DB::table('user_balances')->insert([
+                // generate uuid
+                'id' => \Illuminate\Support\Str::uuid(),
+                'user_id' => $user->id,
+                'balance' => 10000,
+            ]);
+        }
+        $user_balance = $balance->balance;
+
+        // dd($user);
+        return view('profileview', compact('user', 'user_balance'));
     }
 }
