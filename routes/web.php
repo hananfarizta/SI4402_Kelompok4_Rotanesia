@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// user route
+// Route::get('/register', [UserController::class, 'index'])->name('register.get');
+Route::post('register', [UserController::class, 'register'])->name('register.post');
+Route::get('login', [UserController::class, 'login'])->name('login.get');
+Route::post('login', [UserController::class, 'loginUser'])->name('login.post');
+Route::get('logout', [UserController::class, 'logout'])->name('logout.get');
+route::post('/logout', [UserController::class, 'logoutUser']);
+
 
 Route::get('/', function () {
     return view('home');
@@ -58,12 +68,9 @@ Route::get('/about-us', function () {
     return view('about-us');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+Route::group(
+    ['middleware' => ['auth', 'roles:ADMIN']], function(){
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
+    });

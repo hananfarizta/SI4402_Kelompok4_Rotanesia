@@ -2,6 +2,7 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 body {
     font-family: arial;
     overflow-x: hidden;
@@ -156,6 +157,7 @@ body {
     }
 }
 
+
 /* Navbar */
 
 nav {
@@ -199,7 +201,9 @@ nav ul li.nav-item a:hover {
     transition: 0.5s;
 }
 
+
 /* Hamburger menu */
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -228,7 +232,9 @@ nav ul li.nav-item a:hover {
     transition: all 0.5s;
 }
 
+
 /* Humberger Menu Animation */
+
 .menu-toggle span:nth-child(2) {
     transform-origin: 0 0;
 }
@@ -237,23 +243,26 @@ nav ul li.nav-item a:hover {
     transform-origin: 0 100%;
 }
 
-.menu-toggle input:checked ~ span:nth-child(2) {
+.menu-toggle input:checked~span:nth-child(2) {
     transform: rotate(45deg) translate(-1px, -1px);
 }
 
-.menu-toggle input:checked ~ span:nth-child(4) {
+.menu-toggle input:checked~span:nth-child(4) {
     transform: rotate(-45deg) translate(-0.5px, 0);
 }
 
-.menu-toggle input:checked ~ span:nth-child(3) {
+.menu-toggle input:checked~span:nth-child(3) {
     opacity: 0;
     transform: scale(0);
 }
 
+
 /* DROPDOWN */
+
 nav .nav-item ul.dropdown {
     display: none;
 }
+
 nav ul li:hover .dropdown {
     display: block;
     background-color: rgba(0, 0, 0, 0.6);
@@ -264,18 +273,24 @@ nav ul li:hover .dropdown {
     border-radius: 5px;
 }
 
+
 /* END DROPDOWN */
+
 
 /* RESPONSIVE BREAKPOIINT */
 
+
 /* UKURAN TABLET */
+
 @media screen and (max-width: 768px) {
     nav ul {
         width: 60%;
     }
 }
 
+
 /* UKURAN MOBILE */
+
 @media screen and (max-width: 576px) {
     .menu-toggle {
         display: flex;
@@ -297,11 +312,9 @@ nav ul li:hover .dropdown {
         opacity: 0;
         color: white;
     }
-
     nav ul li.nav-item a {
         color: white;
     }
-
     nav ul.slide {
         opacity: 1;
         transform: translateX(0);
@@ -316,6 +329,7 @@ nav ul li:hover .dropdown {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .back-blur {
     backdrop-filter: blur(5px);
     height: 100%;
@@ -344,11 +358,7 @@ a .btn-gradient {
 
 a .btn-gradient span {
     background: #c32334;
-    background: linear-gradient(
-        0deg,
-        rgb(139, 28, 46) 0%,
-        rgb(209, 91, 113) 100%
-    );
+    background: linear-gradient( 0deg, rgb(139, 28, 46) 0%, rgb(209, 91, 113) 100%);
     display: block;
     position: absolute;
     width: 220px;
@@ -362,6 +372,7 @@ a .btn-gradient span {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 a .btn-gradient span:nth-child(1) {
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
@@ -370,6 +381,7 @@ a .btn-gradient span:nth-child(1) {
     -moz-transform-origin: 50% 50% -20px;
     transform-origin: 50% 50% -20px;
 }
+
 a .btn-gradient span:nth-child(2) {
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
@@ -378,17 +390,21 @@ a .btn-gradient span:nth-child(2) {
     -moz-transform-origin: 50% 50% -20px;
     transform-origin: 50% 50% -20px;
 }
+
 a .btn-gradient:hover span:nth-child(1) {
     -webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
 }
+
 a .btn-gradient:hover span:nth-child(2) {
     color: transparent;
     -webkit-transform: rotateX(-90deg);
     -moz-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
 }
+
+
 /*-------------------BG KONTEN------------------*/
 
 .bg-konten {
@@ -497,9 +513,12 @@ p.text {
     transition: 0.7s;
 }
 
+
 /*------------------/BG KONTEN--------------------*/
 
+
 /*------------------BG KONTEN 2-------------------*/
+
 .bg-konten-2 {
     margin: 25px 0;
     padding: 0;
@@ -567,8 +586,13 @@ hr.divider {
     width: 75%;
     height: 500px;
 }
+
+
 /*------------------/BG KONTEN 2------------------*/
+
+
 /*------------------ GALERY ----------------------*/
+
 .bg-galery {
     margin: 0;
     padding: 0;
@@ -582,9 +606,13 @@ hr.divider {
 .konten-galery img {
     width: 100%;
 }
+
+
 /*------------------/GALERY-----------------------*/
 
+
 /*-------------------NEWS-------------------------*/
+
 .bg-news {
     margin: 5% 0;
     background-image: url(../home_image/destination/home6.jpg);
@@ -645,9 +673,13 @@ hr.divider {
     background-color: #333;
     color: #fff;
 }
+
+
 /*-------------------/NEWS-------------------------*/
 
+
 /*------------------CONTACT------------------------*/
+
 .bg-contact {
     margin: 0;
     padding: 0;
@@ -693,6 +725,8 @@ hr.divider {
     background-color: #fff;
     color: #0097e6;
 }
+
+
 /*------------------/CONTACT-----------------------*/
 
 .footer {
@@ -706,7 +740,6 @@ hr.divider {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Lato:700|Noticia+Text:400i&display=swap");
-
 article {
     /* limit the width of the article container */
     width: 350px;
@@ -722,6 +755,7 @@ article {
     transition: transform 0.2s ease-out;
     box-shadow: 5px 10px 18px #888888;
 }
+
 article figure {
     /* limit the width and height of the figure to show the image in a circle */
     width: 120px;
@@ -732,6 +766,7 @@ article figure {
     /* position relative for the pseudo element */
     position: relative;
 }
+
 article figure:before {
     /* add a border around the figure matching the color of the background, faking the clip */
     content: "";
@@ -745,6 +780,7 @@ article figure:before {
     border: 1rem solid hsl(249, 65%, 49%);
     box-shadow: 0 1px hsla(0, 0%, 0%, 0.1);
 }
+
 article figure img {
     /* stretch the image to cover the size of the wrapping container */
     border-radius: inherit;
@@ -759,6 +795,7 @@ article div {
     text-align: center;
     margin: 2rem;
 }
+
 article div p {
     color: hsl(250, 5%, 45%);
     font-weight: 400;
@@ -769,6 +806,7 @@ article div p {
     position: relative;
     z-index: 5;
 }
+
 article div p:before {
     /* with SVG elements include two icons for the quote */
     content: "";
@@ -781,11 +819,11 @@ article div p:before {
     z-index: -5;
     opacity: 0.05;
     /* position the icons at either end of the paragraph, rotate the second to have a mirrorer image */
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>'),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70" transform="rotate(180)"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70" transform="rotate(180)"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>');
     background-position: 20% 20%, 80% 80%;
     background-repeat: no-repeat;
 }
+
 article div h1 {
     /* considerably reduce the size of the heading */
     color: hsl(260, 5%, 55%);

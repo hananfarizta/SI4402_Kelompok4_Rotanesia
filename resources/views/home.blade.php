@@ -4,70 +4,54 @@
 
 ?>
 
-<!DOCTYPE html>
-<html>
+@extends('layouts.layout')
+@section('content')
+ 
+<link rel="shortcut icon" href="{{ asset('image/favicon.png') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/animations.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/lightbox.css') }}">
 
-<head>
-	<title>Rotanesia</title>
-	<link rel="shortcut icon" href="image/favicon.png">
+<script type="text/javascript">
+		function openNav() {
+			document.getElementById('mySidenav').style.width = '100%'
+		}
 
-	<link rel="stylesheet" type="text/css" href="css/home.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/animations.css">
-	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
-	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+		function closeNav() {
+			document.getElementById('mySidenav').style.width = '0'
+		}
+	</script>
 
-        {{-- BOOTSTRAP --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="js/script.js"></script>
+    <script src="js/move-card.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/css3-animate-it.js"></script>
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.js"></script>
 
-    {{-- ICON BOOTSTRAP--}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			SyntaxHighlighter.all();
+		});
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
 
 
-</head>
-<body id="home">
-	<nav>
-		<div class="logo font-weight-bold">
-			<h3><a href="/home" style="color: #c32334; text-decoration:none">ROTANESIA</a></h3>
-			<!--BG MENU-->
-		</div>
-
-					
-					<ul>
-						<li class="nav-item">
-							<a class="nav-link fw-bold active" href="/home"><i class="bi bi-house-door-fill" style="padding: 3px"></i>Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/product"><i class="bi bi-basket-fill" style="padding: 3px"></i>Products</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/best-seller"> <i class="bi bi-fire" style="padding: 3px"></i>Best Seller</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="#about"><i class="bi bi-headset" style="padding: 3px"></i>Services</a>
-						</li>
-						<li class="nav-item" onclick="myFunction()">
-							<a class="nav-link fw-bold" href="#"><i class="bi bi-person-fill" style="padding: 3px"></i>Account <i class="bi bi-caret-down-fill"></i></a>
-							<ul class="dropdown">
-								<li><a href="/login">Login</a></li>
-								<li><a href="/register">Register</a></li>
-							</ul>
-						</li>
-					</ul>
-					
-					<div class="menu-toggle">
-						<input type="checkbox" />
-						<span></span>
-						<span></span>
-						<span></span>
-						<!-- Menu TOGGLE-->
-					</div>
-		</nav>
-				<div class="col-md-12">
+	<section id="home">
+		<div class="col-md-12">
 					<div class="banner">
 						<div class="back-blur">
 						<div class="text-banner text-center">
@@ -75,15 +59,15 @@
 							<p class="fs-5">
 								"Unique and top quality items for sale at affordable prices. Get yours now!"
 							</p>
-							<a href=""><button class="btn-gradient">
-								<span><i class="bi bi-cart-fill"></i></span><span>Shop Now!!!</span>
+							<a href="{{ 'product' }}"><button class="btn-gradient">
+								<span><i class="bi bi-cart-fill"></i></span><span>Shop Now</span>
 							</button></a>
 						</div>
 						</div>
 					</div>
 				</div>
 
-	<div class="wrapper">
+		<div class="wrapper">
 			<div class="bg-konten row">
 				<div class="center">
 					<section id="best-seller">
@@ -98,7 +82,7 @@
 
 						<div class="col-lg-4 col-md-4 animatedParent">
 							<div class="konten animated bounceInLeft slowest">
-								<img src="home_image/best-seller/home1.jpg">
+								<img src="home_image/best-seller/home1.jpg" />
 								<div class="deskripsi">
 									<h3>Bag</h3>
 									<p>
@@ -127,7 +111,7 @@
 
 						<div class="col-lg-4 col-md-4 animatedParent">
 							<div class="konten animated bounceInDown slowest">
-								<img src="home_image/best-seller/home2.jpg">
+								<img src="home_image/best-seller/home2.jpg" />
 								<div class="deskripsi">
 									<h3>Lamp</h3>
 									<p>
@@ -156,7 +140,7 @@
 
 						<div class="col-lg-4 col-md-4 animatedParent">
 							<div class="konten animated bounceInRight slowest">
-								<img src="home_image/best-seller/home3.jpg">
+								<img src="home_image/best-seller/home3.jpg" />
 								<div class="deskripsi">
 									<h3>Table & Chair</h3>
 									<p>
@@ -186,44 +170,45 @@
 				</div>
 				<!--/CENTER-->
 			</div>
+	  </div>
 			<!--/BG KONTEN ROW-->
 
 
 		<section id="about">
-		<div class="bg-konten-2 row">
-			<div class="col-lg-5 col-md-12 animatedParent">
-				<div class="konten-2 animated bounceInLeft Slow" style="background-color: rgba(0, 0, 0, 0.6)">
-					<h2>ABOUT US</h2>
-					<h4>What Is Rotanesia?</h4>
-					<hr class="divider">
-					<p style="font-size: 14px; text-align:justify">E-commerce atau perdagangan elektronik adalah kegiatan berbelanja dan jual beli melalui jaringan internet. Perusahaan yang menjalankan kegiatan e-commerce akan membuat website yang menampilkan produk yang dijual dan memberikan sistem pembayaran online bagi pelanggan.<br>
-					Rotanesia adalah perusahaan e-commerce yang menjual kerajinan yang terbuat dari bahan baku rotan. Kerajinan rotan adalah produk yang terbuat dari rotan sebagai bahan baku utamanya. Rotan merupakan salah satu jenis pohon yang tumbuh di hutan tropis dan memiliki sifat yang mudah dibentuk sehingga sering digunakan untuk membuat berbagai jenis kerajinan. Kerajinan rotan biasanya digunakan sebagai hiasan rumah atau objek yang memiliki nilai estetika tinggi. Kerajinan rotan dapat dibuat dalam berbagai bentuk dan ukuran sesuai dengan kebutuhan dan selera pelanggan.
-					</p>
+			<div class="bg-konten-2 row">
+				<div class="col-lg-5 col-md-12 animatedParent">
+					<div class="konten-2 animated bounceInLeft Slow" style="background-color: rgba(0, 0, 0, 0.6)">
+						<h2>ABOUT US</h2>
+						<h4>What Is Rotanesia?</h4>
+						<hr class="divider">
+						<p style="font-size: 14px; text-align:justify">E-commerce atau perdagangan elektronik adalah kegiatan berbelanja dan jual beli melalui jaringan internet. Perusahaan yang menjalankan kegiatan e-commerce akan membuat website yang menampilkan produk yang dijual dan memberikan sistem pembayaran online bagi pelanggan.<br>
+						Rotanesia adalah perusahaan e-commerce yang menjual kerajinan yang terbuat dari bahan baku rotan. Kerajinan rotan adalah produk yang terbuat dari rotan sebagai bahan baku utamanya. Rotan merupakan salah satu jenis pohon yang tumbuh di hutan tropis dan memiliki sifat yang mudah dibentuk sehingga sering digunakan untuk membuat berbagai jenis kerajinan. Kerajinan rotan biasanya digunakan sebagai hiasan rumah atau objek yang memiliki nilai estetika tinggi. Kerajinan rotan dapat dibuat dalam berbagai bentuk dan ukuran sesuai dengan kebutuhan dan selera pelanggan.
+						</p>
 
-					<div align="center">
-						<button class="btn-view-2">View More <i class="fa fa-angle-right"></i></button>
+						<div align="center">
+							<button class="btn-view-2">View More <i class="fa fa-angle-right"></i></button>
+						</div>
+						<!--/CENTER-->
 					</div>
-					<!--/CENTER-->
+					<!--/ KONTEN 2-->
 				</div>
-				<!--/ KONTEN 2-->
-			</div>
-			<!--/COL LG 5-->
+				<!--/COL LG 5-->
 
-			<div class="col-lg-7 col-md-12 animatedParent">
-				<div class="bg-slider animated bounceInRight slowest">
-					<iframe
-                                src="<?php echo $convertedurl; ?>"
-                                frameborder="0"
-                                width="100%"
-                                height="400"
-                                style="margin-top: 66px; border: 6px solid#fff; border-radius: 5px;"
-								allowfullscreen
-                            ></iframe>
+				<div class="col-lg-7 col-md-12 animatedParent">
+					<div class="bg-slider animated bounceInRight slowest">
+						<iframe
+																	src="<?php echo $convertedurl; ?>"
+																	frameborder="0"
+																	width="100%"
+																	height="400"
+																	style="margin-top: 66px; border: 6px solid#fff; border-radius: 5px;"
+									allowfullscreen
+															></iframe>
+					</div>
+					<!--/BG SLIDER-->
 				</div>
-				<!--/BG SLIDER-->
+				<!--/COL LG 7-->
 			</div>
-			<!--/COL LG 7-->
-		</div>
 		<!--/BG KONTEN 2-->
 		</section>
 
@@ -238,7 +223,7 @@
 				</div>
 				<!--/col lg 12-->
                 
-                <div class="col-lg-4 col-md-4 animatedParent">
+        <div class="col-lg-4 col-md-4 animatedParent">
 					<div class="konten animated bounceInLeft slowest">
 						<img src="image/customer/customer1.jpg">
 						<div class="deskripsi">
@@ -495,45 +480,45 @@
         <footer class="bg-dark text-white py-5">
             <div class="container">
                 <div class="row">
-                <div class="col-md-3">
-                    <div class="footer">
-                    <h5>About Us</h5>
-                    <p>Rotanesia adalah perusahaan e-commerce yang menjual kerajinan yang terbuat dari bahan baku rotan. Kerajinan rotan adalah produk yang terbuat dari rotan sebagai bahan baku utamanya. <a href=""> ...view more</a></p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer">
-                    <h5>Contact</h5>
-                    <ul class="list-unstyled">
-                    <li>123 Main Street</li>
-                    <li>Banduing, Indonesia</li>
-                    <li>555-555-5555</li>
-                    <li>Rotanesia@gmail.com</li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer" style="border: none;">
-                        <h5>Social Media</h5>
-                        <ul class="list-unstyled">
-                        <li><a href="#"><img src="image/icon/Facebook.png" alt="" width="20"> Facebook</a></li>
-                        <li><a href="#"><img src="image/icon/twitter.png" alt="" width="20"> Twitter</a></li>
-                        <li><a href="#"><img src="image/icon/instagram.png" alt="" width="20"> Instagram</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+									<div class="col-md-3">
+											<div class="footer">
+												<h5>About Us</h5>
+												<p>Rotanesia adalah perusahaan e-commerce yang menjual kerajinan yang terbuat dari bahan baku rotan. Kerajinan rotan adalah produk yang terbuat dari rotan sebagai bahan baku utamanya. <a href=""> ...view more</a></p>
+											</div>
+									</div>
+									<div class="col-md-3">
+											<div class="footer">
+											<h5>Quick Links</h5>
+											<ul class="list-unstyled">
+											<li><a href="#">Home</a></li>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Privacy Policy</a></li>
+											</ul>
+											</div>
+									</div>
+									<div class="col-md-3">
+											<div class="footer">
+											<h5>Contact</h5>
+											<ul class="list-unstyled">
+											<li>123 Main Street</li>
+											<li>Banduing, Indonesia</li>
+											<li>555-555-5555</li>
+											<li>Rotanesia@gmail.com</li>
+											</ul>
+											</div>
+									</div>
+									<div class="col-md-3">
+											<div class="footer" style="border: none;">
+													<h5>Social Media</h5>
+													<ul class="list-unstyled">
+													<li><a href="#"><img src="image/icon/Facebook.png" alt="" width="20"> Facebook</a></li>
+													<li><a href="#"><img src="image/icon/twitter.png" alt="" width="20"> Twitter</a></li>
+													<li><a href="#"><img src="image/icon/instagram.png" alt="" width="20"> Instagram</a></li>
+													</ul>
+											</div>
+									</div>
+            		</div>
             </div>
         </footer>
         {{-- BG FOOTER --}}
@@ -541,41 +526,5 @@
 
 	</div>
 	<!--/wrapper -->
-
-	<script type="text/javascript">
-		function openNav() {
-			document.getElementById('mySidenav').style.width = '100%'
-		}
-
-		function closeNav() {
-			document.getElementById('mySidenav').style.width = '0'
-		}
-	</script>
-
-	<script src="js/script.js"></script>
-    <script src="js/move-card.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/css3-animate-it.js"></script>
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="js/lightbox.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-	<script type="text/javascript">
-		$(function () {
-			SyntaxHighlighter.all();
-		});
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function (slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-
-</body>
-
-</html>
+	</section>
+@endsection

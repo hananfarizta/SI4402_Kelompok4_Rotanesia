@@ -1,62 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-        {{-- BOOTSTRAP --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+@extends('layouts.layout')
+@section('content')
 
-    {{-- ICON BOOTSTRAP--}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    {{-- CSS --}}
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-
-
-</head>
-<body>
-        <nav>
-		<div class="logo fw-bolder">
-			<h3><a href="/home" style="color: #c32334; text-decoration:none">ROTANESIA</a></h3>
-			<!--BG MENU-->
-		</div>	
-					<ul>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/home"><i class="bi bi-house-door-fill" style="padding: 3px"></i>Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/product"><i class="bi bi-basket-fill" style="padding: 3px"></i>Products</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/best-seller"> <i class="bi bi-fire" style="padding: 3px"></i>Best Seller</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="#about"><i class="bi bi-headset" style="padding: 3px"></i>Services</a>
-						</li>
-						<li class="nav-item" onclick="myFunction()">
-							<a class="nav-link fw-bold" href="#"><i class="bi bi-person-fill" style="padding: 3px"></i>Account <i class="bi bi-caret-down-fill"></i></a>
-							<ul class="dropdown">
-								<li><a href="/login">Login</a></li>
-								<li><a href="/register">Register</a></li>
-							</ul>
-						</li>
-					</ul>
-					
-					<div class="menu-toggle">
-						<input type="checkbox" />
-						<span></span>
-						<span></span>
-						<span></span>
-						<!-- Menu TOGGLE-->
-					</div>
-		</nav>
-    <section id="login">
+ <section id="login">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -67,39 +16,44 @@
                     <button class="google"><img src="image/google.png" alt="" width="20"> Sign Up With google</button>
                     <p class="or" style="padding-left:150px; padding-top:20px; color:rgb(192,192,192)">Or Sign Up With Email</p>
 
-                    <form action="">
+                    <form action="{{ route('register.post')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label class="form-label" for="email">Email address</label>
+                            <input type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Fullname</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label class="form-label" for="name">Fullname</label>
+                            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" name="username" class="form-control" id="username" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <label class="form-label" for="phone_number">Phone Number</label>
+                            <input type="text" name="phone_number" class="form-control" id="phone_number" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label class="form-label" for="address">Address</label>
+                            <input type="text" name="address" class="form-control" id="address" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required>
+                            <label class="form-label" for="password">Password</label>
+                            <input type="password" name="password" class="form-control" id="password" required>
                         </div>
-                        <div class="input-group mt-4 mb-3" style="width:72%">
-                        <label class="input-group-text" for="inputGroupSelect01">Role</label>
+                        <div class="mb-3">
+                            <label class="form-label" for="password2">Confirm Password</label>
+                            <input type="password" name="password2" class="form-control" id="password2" required>
+                        </div>
+                        {{-- <div class="input-group mt-4 mb-3" style="width:72%">
+                        <label class="input-group-text" for="inputGroupSelect01" for="roles">Role</label>
                         <select class="form-select" id="inputGroupSelect01" required>
                             <option selected>Choose Your Role</option>
                             <option value="1">Seller</option>
                             <option value="2">Buyer</option>
                         </select>
-                        </div>
+                        </div> --}}
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="remember-me" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Remember Me</label>                          
@@ -155,9 +109,4 @@
         </div>
     </div>
 </section>
-	
-    <script src="js/script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html>
+@endsection
