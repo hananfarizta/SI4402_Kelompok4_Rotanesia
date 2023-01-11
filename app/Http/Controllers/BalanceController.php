@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+
+class BalanceController extends Controller
+{
+    public function topup(Request $request)
+    {
+        $response = Http::withHeaders([
+            'Authorization' => $request->cookie('token'),
+        ])->post(env('API') . '/user/balance', [
+            'balance' => floatval($request->input('balance')),
+        ]);
+        $response = $response->json();
+        // dd($response);
+        return redirect('/profileview')->with('success', $response['message']);
+    }
+
+    public function getbalance(Request $request)
+    {
+        // Get User Balance
+        $response = Http::withHeaders([
+            'Authorization' => $request->cookie('token'),
+        ])->get(env('API') . '/user/balance');
+        $response = $response->object();
+        $balance = $response->data;
+        // get user name
+        $response = Http::withHeaders([
+            'Authorization' => $request->cookie('token'),
+        ])->get(env('API') . '/user/profile');
+        $response = $response->object();
+        $name = $response->data;
+        // dd($name);
+
+        return view('/profileview', compact('balance', 'name'));
+    }
+}
