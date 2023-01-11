@@ -6,7 +6,7 @@
 
 @extends('layouts.layout')
 @section('content')
- 
+
 <link rel="shortcut icon" href="{{ asset('image/favicon.png') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css') }}">
@@ -55,8 +55,8 @@
 					<div class="banner">
 						<div class="back-blur">
 						<div class="text-banner text-center">
-							<h1> Quality is the best <br> Business Plan</h1>
-							<p class="fs-5">
+							<h2> Quality is the best <br> Business Plan</h2>
+							<p class="fs-5" style="color: black">
 								"Unique and top quality items for sale at affordable prices. Get yours now!"
 							</p>
 							<a href="{{ 'product' }}"><button class="btn-gradient">
@@ -82,9 +82,9 @@
 
 						<div class="col-lg-4 col-md-4 animatedParent">
 							<div class="konten animated bounceInLeft slowest">
-								<img src="home_image/best-seller/home1.jpg" />
+								<img src="image/rottan/rottan4.jpg" />
 								<div class="deskripsi">
-									<h3>Bag</h3>
+									<h3>Rattan Toothbrushes</h3>
 									<p>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -111,9 +111,9 @@
 
 						<div class="col-lg-4 col-md-4 animatedParent">
 							<div class="konten animated bounceInDown slowest">
-								<img src="home_image/best-seller/home2.jpg" />
+								<img src="image/rottan/rottan5.jpg" />
 								<div class="deskripsi">
-									<h3>Lamp</h3>
+									<h3>Rattan Bucket</h3>
 									<p>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -140,9 +140,9 @@
 
 						<div class="col-lg-4 col-md-4 animatedParent">
 							<div class="konten animated bounceInRight slowest">
-								<img src="home_image/best-seller/home3.jpg" />
+								<img src="image/rottan/rottan7.jpg" />
 								<div class="deskripsi">
-									<h3>Table & Chair</h3>
+									<h3>Rattan Plate</h3>
 									<p>
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -222,12 +222,12 @@
 					<!--judul konten-->
 				</div>
 				<!--/col lg 12-->
-                
+
         <div class="col-lg-4 col-md-4 animatedParent">
 					<div class="konten animated bounceInLeft slowest">
 						<img src="image/customer/customer1.jpg">
 						<div class="deskripsi">
-							<h3>Bag</h3>
+							<h3>Ericko Putra</h3>
 							<p>
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -254,7 +254,7 @@
 					<div class="konten animated bounceInDown slowest">
 						<img src="image/customer/customer2.jpg">
 						<div class="deskripsi">
-							<h3>Lamp</h3>
+							<h3>Rama Sibutar Butar</h3>
 							<p>
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -282,7 +282,7 @@
 					<div class="konten animated bounceInRight slowest">
 						<img src="image/customer/customer3.jpg">
 						<div class="deskripsi">
-							<h3>Table & Chair</h3>
+							<h3>Zaky Funky</h3>
 							<p>
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -327,7 +327,7 @@
                 </article> --}}
 
 
-				
+
 			</div>
 			<!--/CENTER-->
 		</div>

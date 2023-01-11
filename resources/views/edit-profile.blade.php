@@ -6,31 +6,21 @@
 
 <section>
     <div id="sidebar">
-        <div class="white-label">
-            <img src="assets/img/logowh.png" alt="">
+        <div class="text-center logo font-weight-bold">
+            <h3><a href="/home" style="color: #c32334; text-decoration:none">ROTANESIA</a></h3>
+            <!--BG MENU-->
         </div>
         <div id="sidebar-nav">
             <ul>
                 <li><a href="profileview"><i class="fa fa-user"></i> Profile</a></li>
                 <li class="active"><a href="/edit-profile"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="historytr"><i class="fas fa-shopping-cart"></i> History Transaction</a></li>
-                <li><a href="toko"><i class="fa fa-home"></i> TOKO</a></li>
-                <li></li>
                 <li><a href="/" rel="stylesheet">Home</a></li>
-                <li>
-                    {{-- post logout method from route --}}
-                    {{-- <form action="{{ route('logout.post') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-danger rounded-pill"
-                            style="width:190px; margin-left:30px; margin-top:420px;">Logout</button>
-                    </form> --}}
-                </li>
             </ul>
         </div>
 
 </section>
 <section>
-    <div class="d-flex justify-content-center align-items-center vh-100" >
+    <div class="d-flex justify-content-center align-items-center" >
 
             <form class="shadow w-450 p-3"
                 action="php/edit.php"
@@ -53,15 +43,6 @@
                     value=""
                     autocomplete="off"
                     >
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">User name</label>
-                <input type="text"
-                    class="form-control"
-                    name="name"
-                    value=""
-                    autocomplete="off">
             </div>
 
             <div class="mb-3">
@@ -101,7 +82,7 @@
                     value="" >
             </div>
 
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-danger">Update</button>
             <a href="/home" class="link-secondary"> Home</a>
             </form>
         </div>

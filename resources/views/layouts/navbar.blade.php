@@ -16,15 +16,12 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-headset" style="padding: 3px"></i>Services</a>
-						</li>
+                        </li>
 						<li class="nav-item" onclick="myFunction()">
 							<a class="nav-link fw-bold" href="#"><i class="bi bi-person-fill" style="padding: 3px"></i><i class="bi bi-caret-down-fill"></i></a>
 							<ul class="dropdown">
-								<li><a href="/profileview">Lihat Profile</a></li>
-								<li><a href="/status-order">Status Order</a></li>
+								<li><a href="/profileview">Profile</a></li>
+								<li><a href="/status-order">Order</a></li>
                         <li>
 														<form action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -56,9 +53,6 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-building-fill" style="padding: 3px"></i>About Us</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="/about-us"><i class="bi bi-headset" style="padding: 3px"></i>Services</a>
 						</li>
 						<li class="nav-item" onclick="myFunction()">
 							<a class="nav-link fw-bold" href="#"><i class="bi bi-person-fill" style="padding: 3px"></i><i class="bi bi-caret-down-fill"></i></a>

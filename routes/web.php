@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BalanceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +23,15 @@ Route::post('/loginadmin', [UserController::class, 'loginAdmin'])->name('login.a
 Route::get('logout', [UserController::class, 'logout'])->name('logout.get');
 route::post('/logout', [UserController::class, 'logoutUser'])->name('logout');
 
-Route::get('/admindash', [AdminController::class], 'dashboard')->name('admindash');
+Route::get('/admindash', [AdminController::class, 'dashboard'])->name('admindash');
 
 Route::get('/profileview', [UserController::class, 'profile'])->name('profileview');
+Route::post('/balance', [BalanceController::class, 'topup'])->name('topup.post');
+Route::get('/historytr', [BalanceController::class, 'getbalance'])->name('historytr');
+
+Route::post('/category', [AdminController::class, 'createCategory'])->name('category.post');
+Route::delete('/category/{id}', [AdminController::class, 'deleteCategory'])->name('category.delete');
+Route::get('/category', [AdminController::class, 'showAllCategories'])->name('category');
 
 Route::get('/', function () {
     return view('home');
@@ -66,6 +73,14 @@ Route::get('/detail-product', function () {
     return view('detail-product');
 });
 
+Route::get('/detail-product2', function () {
+    return view('detail-product2');
+});
+
+Route::get('/detail-product3', function () {
+    return view('detail-product3');
+});
+
 Route::get('/direct-succes', function () {
     return view('direct-succes');
 });
@@ -78,10 +93,3 @@ Route::get('/status-order', function () {
 Route::get('/about-us', function () {
     return view('about-us');
 });
-
-Route::group(
-    ['middleware' => ['auth', 'roles:ADMIN']], function(){
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->name('dashboard');
-    });

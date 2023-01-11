@@ -15,11 +15,10 @@
                         <div class="card" style="width: 18rem;">
                             <img src="image/rottan/rottan4.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title">Rattan Toothbrushes</h5>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
+                                <li class="list-group-item">Price: $10</li>
                                 <li class="list-group-item"><p>
 										<i class="bi bi-star-fill"></i>
 										<i class="bi bi-star-fill"></i>
@@ -33,7 +32,7 @@
                             </ul>
                             <div class="card-body">
                                 <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
+								<a href="/detail-product"><button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button></a>
                             </div>
                         </div>
 					</div>
@@ -41,11 +40,10 @@
                         <div class="card" style="width: 18rem;">
                             <img src="image/rottan/rottan5.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
+                                <h5 class="card-title">Rattan Bucket</h5>
+                                                            </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
+                                <li class="list-group-item">Price: $30</li>
                                 <li class="list-group-item"><p>
 										<i class="bi bi-star-fill"></i>
 										<i class="bi bi-star-fill"></i>
@@ -59,33 +57,7 @@
                             </ul>
                             <div class="card-body">
                                 <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan6.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
+								<a href="/detail-product2"><button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button></a>
                             </div>
                         </div>
 					</div>
@@ -93,11 +65,10 @@
                         <div class="card" style="width: 18rem;">
                             <img src="image/rottan/rottan7.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
+                                <h5 class="card-title">Rattan Plate</h5>
+                                                            </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
+                                <li class="list-group-item">Price: $20</li>
                                 <li class="list-group-item"><p>
 										<i class="bi bi-star-fill"></i>
 										<i class="bi bi-star-fill"></i>
@@ -115,215 +86,8 @@
                             </div>
                         </div>
 					</div>
-					<div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan8.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan9.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan10.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan11.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan14.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan15.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan16.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="image/rottan/rottan12.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Price: Rp. 70.000.00</li>
-                                <li class="list-group-item"><p>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-fill"></i>
-										<i class="bi bi-star-half"></i>
-										|
-										413 Reviews
-									</p></li>
-                                <li class="list-group-item">413 items sold</li>
-                            </ul>
-                            <div class="card-body">
-                                <button class="btn-view">Wishlist &emsp13;<i class="bi bi-bag-heart-fill"></i></button>
-								<button class="btn-book">Buy Now &emsp13;<i class="bi bi-cart-fill"></i></button>
-                            </div>
-                        </div>
-					</div>
-            </div>              
+
+            </div>
 		</section>
 		<!-- AKHIR PROJECTS -->
 

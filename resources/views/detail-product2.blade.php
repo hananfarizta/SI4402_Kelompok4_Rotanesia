@@ -16,14 +16,14 @@
                         <div class="col-md-6 mb-4">
                             <div class="detail-page">
                                 <div class="photo">
-                                    <img src="image/rottan/rottan4.jpg" alt="Product photo">
+                                    <img src="image/rottan/rottan5.jpg" alt="Product photo">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="info">
-                                <h1>Rattan toothbrushes</h1>
-                                <p>Rattan toothbrushes are considered effective in cleaning teeth and reducing the risk of caries when used properly. However, there are a number of things that need to be considered when using a rattan toothbrush, such as choosing rattan that is still fresh and making sure it is not too rough or too soft. Wicker toothbrushes should also be replaced every few weeks to maintain their effectiveness.</p>
+                                <h1>Rattan Bucket</h1>
+                                <p>Rattan bucket is a bucket made of rattan that can store the things we need. Made of rattan, this rattan bucket is environmentally friendly and also does not generate plastic waste. Because it is made of rattan, this bucket is durable and also strong.</p>
                                 <p>
 										<i class="bi bi-star-fill"></i>
 										<i class="bi bi-star-fill"></i>
@@ -33,7 +33,7 @@
 										|
 										4.7 Reviews
 								</p>
-                                <div class="price">$10</div>
+                                <div class="price">$30</div>
                                 <div class="quantity-selector">
                                     <button class="minus">-</button>
                                     <span class="quantity">1</span>
@@ -77,7 +77,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
                             </div>
                         </div>
 				</div>
@@ -187,7 +186,7 @@
             </div>
         </footer>
         {{-- BG FOOTER --}}
-        <script src="{{asset('js/detail-product.js')}}"></script>
+        <script src="{{asset('js/detail-product2.js')}}"></script>
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 @endsection
